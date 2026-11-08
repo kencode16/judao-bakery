@@ -1,0 +1,21 @@
+{
+  "name": "菊島連連烘",
+  "short_name": "菊島連連烘",
+  "description": "澎湖小甜點店的連連看：把相同的甜點用奶油線連起來，收集 55 種世界甜點。",
+  "lang": "zh-Hant-TW",
+  "dir": "ltr",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FBF4EA",
+  "theme_color": "#FBF4EA",
+  "categories": ["games", "entertainment"],
+  "icons": [
+    { "src": "icons/icon-180.png", "sizes": "180x180", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

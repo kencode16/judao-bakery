@@ -9,7 +9,7 @@
 // 開發：網址加 ?nosw 的頁面完全不經過快取（main.js 也不會註冊）。
 // 結構大改時把 CACHE 的版本號加一，舊快取會在啟用時刪掉。
 
-const CACHE = 'judao-v1';
+const CACHE = 'judao-v2';   // v1.1（2026-11-08）：盤面改 8～9 列
 const SEEDS = [
   './', 'index.html', 'manifest.webmanifest',
   'icons/icon-180.png', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/icon-512-maskable.png',

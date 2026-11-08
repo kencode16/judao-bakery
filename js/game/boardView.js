@@ -49,17 +49,19 @@ export class BoardView {
   D(ms) { return ms / this.speed; }
 
   /* ---------- 版面 ---------- */
-  /** 依可用空間算格子大小：寬度優先（iPhone 390 寬＝44 px），高度不夠時再縮 */
+  /** 依可用空間算格子大小：寬度優先（iPhone 390 寬＝44 px），高度不夠時再縮。
+   *  v1.1：平板畫面大，寬度上限 480→720、格子上限 64→84 px，格子大時外圍走道跟著加寬（奶油線才不會貼著甜點） */
   measure() {
-    const W = Math.min(this.host.clientWidth || 390, 480) - 16;   // 左右各留 8 px
+    const W = Math.min(this.host.clientWidth || 390, 720) - 16;   // 左右各留 8 px
     const H = (this.host.clientHeight || 600) - 8;
     let lp = 16, gap = GAP;
     const fit = (lp) => {
       const sw = Math.floor((W - 10 - 2 * lp - gap * (this.cols - 1)) / this.cols);
       const sh = Math.floor((H - 10 - 2 * lp - gap * (this.rows - 1)) / this.rows);
-      return Math.min(sw, sh, 64);
+      return Math.min(sw, sh, 84);
     };
     let s = fit(lp);
+    if (s > 56) { lp = Math.round(s * 0.3); s = fit(lp); }
     if (s < 44) { lp = 13; s = fit(lp); }
     this.size = Math.max(36, s); this.lp = lp; this.lane = Math.round(lp * 0.56);
   }

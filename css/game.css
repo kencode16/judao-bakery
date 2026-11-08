@@ -255,3 +255,8 @@
   .g-hud { padding-top: 22px; }
 }
 .g-broken .g-card { opacity: 1; transform: none; margin: 80px auto 0; width: calc(100% - 32px); }
+
+/* v1.1（2026-11-08）：平板畫面大，遊戲畫面放寬到 720 px，格子跟著放大（首頁、地圖、圖鑑維持 480 px） */
+@media (min-width: 600px) and (min-height: 800px) {
+  #app:has(.g-screen) { max-width: 720px; }
+}
